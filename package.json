@@ -1,0 +1,41 @@
+{
+  "name": "react-babylon",
+  "description": "BabylonJS plugin for ReactJS",
+  "authors": ["zimmed@zimmed.io"],
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "build/react-babylon.bundle.js",
+  "repository": "github.com/zimmed/react-babylon",
+  "scripts": {
+    "clean": "rm -f build/*.bundle.js",
+    "build": "npm test && npm run clean && webpack",
+    "build:watch": "npm test && npm run clean && npm run watch",
+    "watch": "webpack --watch",
+    "test": "grunt test:all",
+    "init": "rm -rf ./node_module; npm i && npm build"
+  },
+  "dependencies": {
+    "babylonjs": "^2.5.0",
+    "lodash": "^4.17.4",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babel-runtime": "^6.22.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.14.1",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-react": "^6.9.0",
+    "glob": "^7.1.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "mocha": "^3.2.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
