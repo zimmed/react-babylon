@@ -1,14 +1,14 @@
 const _ = require('lodash');
 const {expect} = require('chai');
-const reducer = require('./hud.reducer');
-const model = require('./hud.model');
+const reducer = require('./interface.reducer');
+const model = require('./interface.model');
 
 const actionHandlers = [];
 const childReducers = [];
 const mockChildReducer = () => null;
 
 
-describe('Hud Reducer', () => {
+describe('Interface Reducer', () => {
     let originalReducers;
 
     before(() => {
@@ -20,7 +20,7 @@ describe('Hud Reducer', () => {
         _.forEach(reducer.children, (v, k) => reducer.children[k] = originalReducers[k]);
     });
 
-    it('should be a function that returns the hud model when initialized', () => {
+    it('should be a function that returns the interface model when initialized', () => {
         let state = {};
 
         expect(reducer).to.exist;

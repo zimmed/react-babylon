@@ -4,7 +4,7 @@ const reducer = require('./game.reducer');
 const model = require('./game.model');
 
 const actionHandlers = [];
-const childReducers = ['scene', 'hud'];
+const childReducers = ['scene', 'interface'];
 const mockChildReducer = () => null;
 
 

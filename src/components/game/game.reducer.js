@@ -1,12 +1,12 @@
 const Reducer = require('redux-reducers');
 const gameModel = require('./game.model');
 const {sceneReducer} = require('./components/scene');
-const {hudReducer} = require('./components/hud');
+const {interfaceReducer} = require('./components/interface');
 
 const actions = {};
 const childReducers = {
     scene: sceneReducer,
-    hud: hudReducer
+    interface: interfaceReducer
 };
 
 module.exports = Reducer.create(gameModel, actions, childReducers);
