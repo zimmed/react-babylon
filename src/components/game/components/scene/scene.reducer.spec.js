@@ -1,14 +1,14 @@
 const _ = require('lodash');
 const {expect} = require('chai');
-const reducer = require('./game.reducer');
-const model = require('./game.model');
+const reducer = require('./scene.reducer');
+const model = require('./scene.model');
 
 const actionHandlers = [];
-const childReducers = ['scene', 'hud'];
+const childReducers = [];
 const mockChildReducer = () => null;
 
 
-describe('Game Reducer', () => {
+describe('Scene Reducer', () => {
     let originalReducers;
 
     before(() => {
@@ -20,7 +20,7 @@ describe('Game Reducer', () => {
         _.forEach(reducer.children, (v, k) => reducer.children[k] = originalReducers[k]);
     });
 
-    it('should be a function that returns the game model when initialized', () => {
+    it('should be a function that returns the scene model when initialized', () => {
         let state = {};
 
         expect(reducer).to.exist;

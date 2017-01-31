@@ -1,16 +1,15 @@
 const React = require('react');
 const {connect} = require('react-redux');
-//const {Scene} = require('./components/scene');
+const {Scene} = require('./components/scene');
+const {Hud} = require('./components/hud');
 
-const Scene = () => (<div></div>);
-
-const render = ({demoText}) => (
-    <div>
+const Game = ({demoText, dispatch}) => (
+    <div id="Game">
         <Scene/>
-        <span>{demoText}</span>
+        <Hud/>
     </div>
 );
 
 const stateToProps = ({game}) => game || {};
 
-module.exports = connect(stateToProps)(render);
+module.exports = connect(stateToProps)(Game);

@@ -5,7 +5,7 @@ const App = require('./app.component');
 const appModel = require('./app.model');
 const appReducer = require('./app.reducer');
 
-const ROOT_ELEMENT_ID = 'application';
+const ROOT_ELEMENT_ID = 'App';
 
 if (!_.isUndefined(document)) {
     let element = document.getElementById(ROOT_ELEMENT_ID);

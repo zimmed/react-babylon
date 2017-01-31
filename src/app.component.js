@@ -4,10 +4,10 @@ const AppReducer = require('./app.reducer');
 const store = require('./services/store.service').create(AppReducer);
 const {Game} = require('./components/game');
 
-const render = () => (
+const App = () => (
     <Provider store={store}>
         <Game/>
     </Provider>
 );
 
-module.exports = render;
+module.exports = App;
