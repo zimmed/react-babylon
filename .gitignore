@@ -1,3 +1,5 @@
 node_modules
 .idea
 build
+public/js/*.bundle.js
+public/css/*.bundle.css
