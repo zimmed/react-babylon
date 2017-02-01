@@ -15,7 +15,7 @@ module.exports = function(grunt) {
             },
             sourceFiles: {
                 options: {spawn: false},
-                files: [`${config.dev.testPath}/**/!(*.spec)${config.dev.jsExt}`],
+                files: [`${config.dev.srcPath}/**/!(*.spec)${config.dev.jsExt}`],
                 tasks: ['test:custom']
             }
         },
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
                 exe: config.dev.testExe
             },
             all: {
-                src: ['src/**/*.spec.js'],
+                src: [`${config.dev.testPath}/**/*${config.dev.testExt}`],
                 exe: config.dev.testExe
             }
         }

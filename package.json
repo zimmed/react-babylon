@@ -4,7 +4,7 @@
   "authors": [
     "zimmed@zimmed.io"
   ],
-  "version": "0.0.4a",
+  "version": "0.0.4b",
   "license": "MIT",
   "main": "build/react-babylon.bundle.js",
   "repository": "github.com/zimmed/react-babylon",
@@ -22,10 +22,11 @@
     "lodash": "^4.17.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-functional": "^2.0.0",
     "react-redux": "^5.0.2",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0",
-    "redux-reducers": "^0.2.0"
+    "redux-reducers": "^0.2.0",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
@@ -43,6 +44,7 @@
     "glob": "^7.1.1",
     "grunt": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
+    "jsdom": "^9.9.1",
     "mocha": "^3.2.0",
     "react-addons-test-utils": "^15.4.2",
     "redux-mock-store": "^1.2.2",

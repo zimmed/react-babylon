@@ -17,7 +17,7 @@ module.exports = {
         jsExt: '.js',
         styleExt: '.sass',
         testExt: '.spec.js',
-        testExe: 'node ./node_modules/mocha/bin/mocha --require babel-core/register',
+        testExe: 'node ./node_modules/mocha/bin/mocha test-browser.js --require babel-core/register',
     }
 
 };

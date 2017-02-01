@@ -7,25 +7,24 @@ const babel = (JSON).parse(fs.readFileSync('./.babelrc'));
 module.exports = {
     entry: './src/index.js',
     output: {
-        path: path.join(__dirname, 'public/js/'),
-        filename: config.name + '.bundle.js'
+        path: path.join(__dirname, config.build.basePath, config.build.scriptDir),
+        filename: config.name + config.build.scriptExt
     },
     module: {
         loaders: [
             {
-                test: /\.js$/,
+                test: new RegExp(`\\${config.dev.jsExt}$`),
                 loader: 'babel-loader',
                 include: [
-                    path.resolve('./src'),
-                    fs.realpathSync('./node_modules/redux-reducers')
+                    path.resolve(`./${config.dev.srcPath}`),
                 ],
                 query: {
-                    //cacheDirectory: true,
+                    cacheDirectory: true,
                     presets: babel.presets.map(t => require.resolve(t))
                 }
             },
             {
-                test: /\/js$/,
+                test: new RegExp(`\\/${config.dev.jsExt.substr(1)}$`),
                 loader: 'eslint-loader',
                 exclude: /node_modules/
             }
