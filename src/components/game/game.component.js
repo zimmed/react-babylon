@@ -6,7 +6,7 @@ const {Interface} = require('./components/interface');
 const Game = ({demoText, dispatch}) => (
     <div id="Game">
         <Scene/>
-        <Hud/>
+        <Interface/>
     </div>
 );
 
